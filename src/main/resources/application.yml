@@ -1,3 +1,15 @@
 spring:
   application:
     name: etd-gateway
+
+gateway:
+  etd:
+    base-uri: http://localhost:8081
+    gateway-header-name: X-Api-Gateway
+    gateway-header-value: etd-gateway
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,refresh
